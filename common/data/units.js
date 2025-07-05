@@ -4397,8 +4397,12 @@ window.units = [
     [ "페로나 - 푸른 하늘에 반짝이는 미소", "PSY", ["Cerebral", "Striker"], 5, 30, 4, 4, 99, 4000000, 1736, 776, 127, 3472, 1552, 254, 1 ],
     [ "울티 - 맑게 갠 날씨에 빛나는 모습", "STR", ["Striker", "Powerhouse"], 5, 30, 4, 4, 99, 4000000, 1825, 841, 91, 3650, 1682, 181, 1 ],
     [ "보아 행콕 - 반짝이는 물보라", "STR", ["Cerebral", "Free Spirit"], 5, 40, 4, 4, 99, 5000000, 1532, 809, 101, 3063, 1618, 201, 1 ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ], //캐릭터 번호 4399
+    [ "보아 행콕 - 여제를 돋보이게 하는 물보라", "STR", ["Cerebral", "Free Spirit"], "5+", 40, 4, 4, 99, 5000000, 1589, 824, 111, 3177, 1648, 222, 1 ], //신규반영완료 초진 
     [ "캐럿 - 튜브와 함께 원더랜드", "QCK", ["Fighter", "Striker"], 5, 30, 4, 4, 99, 4000000, 1792, 791, 138, 3583, 1581, 276, 1 ],
+    [ "포트거스 D. 에이스 - 흰 수염의 새 아들", "STR", ["Powerhouse", "Striker"], 6, 55, 4, 5, 99, 5000000, 2055, 878, 128, 4110, 1755, 255, 1 ],
+    [ "마샬 D. 티치 - 날아든 소식", "STR", ["Powerhouse", "Striker"], 5, 30, 5, 4, 99, 4000000, 1921, 799, 76, 3842, 1598, 152, 1 ],
+    [ "", "Type", ["Class1", "Class2"], null, null, null, null, null, null, null, null, null, null, null, null, null ], //공란
+    [ "마르코 - 날아든 소식", "STR", ["Powerhouse", "Striker"], 5, 30, 4, 4, 99, 4000000, 1722, 752, 125, 3444, 1503, 250, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
