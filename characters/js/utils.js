@@ -163,13 +163,23 @@ CharUtils.getUnitTags = function(id) {
     var tags = [];
 
     angular.forEach(window.characterTags, function(value, key) {
-        if (value.characterIds && value.characterIds.includes(parsedId)) {
-            tags.push({ name: key, category: value.category });
+        if (value.characterIds) {
+            for (var i = 0; i < value.characterIds.length; i++) {
+                if (value.characterIds[i].logbookId === parsedId) {
+                    tags.push({ 
+                        name: key, 
+                        category: value.category,
+                        childIndex: value.characterIds[i].childIndex
+                    });
+                    // break;   ← 이 줄 없애기!
+                }
+            }
         }
     });
 
     return tags;
 };
+
 
 CharUtils.getFarmableVersions = function (id) {
     id = Number(id);
