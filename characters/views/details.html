@@ -93,6 +93,14 @@
                                     <td ng-if="!compare" colspan="{{::hybrid ? 2 : 1}}">{{::unit.maxEXP | number}}</td>
                                     <td ng-if="compare" colspan="{{::hybrid ? 2 : 1}}" comparison="negative">{{unit.maxEXP - compare.maxEXP | number}}</td>
                                 </tr>
+                                <tr ng-if="unit.tags && unit.tags.length">
+                                <th>태그</th>
+                                <td colspan="4">
+                                    <span ng-repeat="tag in unit.tags" class="tag-badge tag-cat-{{tag.category}}">
+                                    {{tag.name}}
+                                    </span>
+                                </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

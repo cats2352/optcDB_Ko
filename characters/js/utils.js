@@ -153,6 +153,24 @@ CharUtils.searchDropLocations = function(id) {
  * @returns {Object[]|null} Array of objects of farmable versions of the unit
  * with the structure {id: number, name: string, location: object}
  */
+
+CharUtils.getUnitTags = function(id) {
+    if (!id) return [];
+
+    var parsedId = parseInt(id, 10);
+    if (!parsedId) return [];
+
+    var tags = [];
+
+    angular.forEach(window.characterTags, function(value, key) {
+        if (value.characterIds && value.characterIds.includes(parsedId)) {
+            tags.push({ name: key, category: value.category });
+        }
+    });
+
+    return tags;
+};
+
 CharUtils.getFarmableVersions = function (id) {
     id = Number(id);
     let families = window.families[id];
