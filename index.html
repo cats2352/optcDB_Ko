@@ -1,108 +1,185 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<!--
-                           ____   _   __ ______   ____   ____ ______ ______ ______                 
-                          / __ \ / | / // ____/  / __ \ /  _// ____// ____// ____/                 
-                         / / / //  |/ // __/    / /_/ / / / / __/  / /    / __/                    
-                        / /_/ // /|  // /___   / ____/_/ / / /___ / /___ / /___                    
-                        \____//_/ |_//_____/  /_/    /___//_____/ \____//_____/                    
-  ______ ____   ______ ___    _____  __  __ ____   ______   ______ ____   __  __ ____ _____  ______
- /_  __// __ \ / ____//   |  / ___/ / / / // __ \ / ____/  / ____// __ \ / / / //  _// ___/ / ____/
-  / /  / /_/ // __/  / /| |  \__ \ / / / // /_/ // __/    / /    / /_/ // / / / / /  \__ \ / __/   
- / /  / _, _// /___ / ___ | ___/ // /_/ // _, _// /___   / /___ / _, _// /_/ /_/ /  ___/ // /___   
-/_/  /_/ |_|/_____//_/  |_|/____/ \____//_/ |_|/_____/   \____//_/ |_| \____//___/ /____//_____/   
-                       ____   ___   ______ ___     ____   ___    _____  ______                     
-                      / __ \ /   | /_  __//   |   / __ ) /   |  / ___/ / ____/                     
-                     / / / // /| |  / /  / /| |  / __  |/ /| |  \__ \ / __/                        
-                    / /_/ // ___ | / /  / ___ | / /_/ // ___ | ___/ // /___                        
-                   /_____//_/  |_|/_/  /_/  |_|/_____//_/  |_|/____//_____/
--->
+	<head>
+		<title>원피스 트레저 크루즈 데이터베이스</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="display/css/main.css" />
+	</head>
+	<body class="is-preload">
 
-    <head>
-        <title>원피스 트레저 크루즈 데이터베이스</title>
-        <link rel="stylesheet" type="text/css" href="common/libs/css/animate.css" />
-        <link rel="stylesheet" type="text/css" href="common/libs/css/fontawesome/all.css" />
-        <!-- link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/js/all.js" -->
-        <!-- link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/js/v4-shims.js" -->
-        <link rel="stylesheet" type="text/css" href="index.css" />
-        <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <script src="common/libs/js/jquery.min.js"></script>
-        <script src="common/data/units.js"></script>
-        <script src="common/js/utils.js"></script>
-        <script src="common/js/nonSuspicious.js"></script>
-        <meta name="viewport" content="initial-scale=1, user-scalable=no, user-scalable=0">
-        <meta name="author" content="Solaris, Zeenigami, and Mondfischer">
-        <meta name="keywords" content="OPTC, One Piece Treasure Cruise, Database, Calculator, Guides, Help, Walkthroughs, Tutorials">
-        <meta name="description" content="Fan run database for One Piece Treasure Cruise. Includes a character database with all unit ability descriptions. Also includes a damage calculator that accurately helps you find out how much damage your team will deal.">
+		<!-- Header -->
+			<div id="header">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-59Y3NZR5TN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+				<!-- mobile mode -->
+				<div class="top">
+					<nav id="nav1">
+					<ul>
+						<li><a href="damage" id="top-link"><span class="icon solid fa-th">데미지 계산기</span></a></li>
+						<li><a href="characters" id="portfolio-link"><span class="icon solid fa-th">캐릭터DB</span></a></li>
+						<li><a href="https://optc-ships.vercel.app" id="about-link"><span class="icon solid fa-th">선박 DB리스트</span></a></li>
+						<li><a href="https://cats2352.github.io/optcSupportDB//" id="contact-link"><span class="icon solid fa-th">서포트 캐릭터 DB리스트</span></a></li>
+						<li><a href="https://thepiebandit.github.io/optc-pirate-rumble-db/" id="contact-link"><span class="icon solid fa-th">해적제 캐릭터DB</span></a></li>
+						<li><a href="title23/title.html" id="contact-link"><span class="icon solid fa-th">칭호 DB리스트</span></a></li>
+						<li><a href="https://gall.dcinside.com/mgallery/board/lists/?id=onepiecetc" id="contact-link"><span class="icon solid fa-th">원트크 갤러리</span></a></li>
+						<li><a href="https://cafe.naver.com/bneoptc" id="contact-link"><span class="icon solid fa-th">네이버 공식카페</span></a></li>
+					</ul>
+					</nav>
+				</div>
 
-  gtag('config', 'G-59Y3NZR5TN');
-</script>
+				<div class="bottom">
 
-    </head>
+				</div>
+			</div>
+			
+			<!-- PC mode -->
+			<div style="width: 100%;">
+				<div id="demo-header">
+					<div class="left">
+						<ul class="selector">
+							<li class="active"><a href="damage" id="top-link"><span class="icon solid">데미지 계산기</span></a></li>
+							<li data-width="" data-height="768"><a href="characters" id="portfolio-link"><span class="icon solid">캐릭터DB</span></a></li>
+							<li data-width="" data-height="1000"><a href="https://optc-ships.vercel.app" id="about-link"><span class="icon solid">선박 DB리스트</span></a></li>
+							<li data-width="" data-height="568"><a href="https://cats2352.github.io/optcSupportDB//" id="contact-link"><span class="icon solid">서포트 캐릭터 DB리스트</span></a></li>
+							<li data-width="" data-height="568"><a href="https://thepiebandit.github.io/optc-pirate-rumble-db/" id="contact-link"><span class="icon solid">해적제 캐릭터DB</span></a></li>
+							<li data-width="" data-height="568"><a href="title23/title.html" id="contact-link"><span class="icon solid">칭호 DB리스트</span></a></li>
+							<li data-width="" data-height="568"><a href="https://gall.dcinside.com/mgallery/board/lists/?id=onepiecetc" id="contact-link"><span class="icon solid">원트크 갤러리</span></a></li>
+							<li data-width="" data-height="568"><a href="https://cafe.naver.com/bneoptc" id="contact-link"><span class="icon solid">네이버 공식카페</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 
-    <body>
+		<!-- Main -->
+			<div id="main">
 
-        <div id="container">
-            <h1 id="main-title"></h1>
-            <a class="animated zoomInLeft button blue" href="damage">데미지 계산기</a>
-            <a class="animated zoomInRight button green" href="characters">캐릭터DB</a>
-            <!--a class="animated zoomInLeft button darkpurple" href="https://optcreddit.github.io/ships">Ship Database</a-->
-            <a class="animated zoomInLeft button darkpurple" href="https://hayaden.github.io/optc-ships/">선박 DB리스트</a>
-            <a class="animated zoomInRight button limegreen" href="https://cats2352.github.io/optcSupportDB//">서포트 캐릭터 DB리스트</a>
-            <a class="animated zoomInRight button darkorange" href="https://thepiebandit.github.io/optc-pirate-rumble-db/">해적제 캐릭터DB</a>
-            <a class="animated zoomInLeft button brown" href="https://gall.dcinside.com/mgallery/board/lists/?id=onepiecetc">원트크 갤러리</a>
-            <a class="animated zoomInLeft button brown" href="https://cafe.naver.com/bneoptc">네이버 공식카페</a>
-            <a class="animated zoomInRight button gold" href="title23/title.html">칭호 DB리스트</a>
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+							<div class="div-main">
+								<span class="div-span">
+									모든 캐릭터의 정보
+								</span>
+							</div>
+							<div class="div-main">
+								<span class="div-span2">
+									편리하고, 정확하게
+								</span>
+								<!-- <img alt="" src="display/images/main_img.png"> -->
+							</div>
+							<div>
+								<span>
+									원하는 캐릭터를 손쉽게 검색하고 정보를 쉽게 얻으세요.
+								</span>
+							</div>
 
-<!--
-            <a class="animated zoomInLeft button brown" href="turtles">Turtle Times</a>
--->
-        </div> 
-        <div id="empty">
-        </div>
-        <div class="animated zoomIn blue" id="changelog">
-            <p id="update">Updates</p>
+							<header style="color: #000;">
+								<h2 class="alt" style="font-size: 20px; font-weight: bold;">원하는 캐릭터를 손쉽게 검색하고 정보를 쉽게 얻으세요.</h2>
+								<h2 class="alt" style="font-size: 20px; font-weight: bold;">OPTC - DataBase with korea</h2>
+							</header>
+						</div>
+					</section>
+					
+					<section id="contact" class="four">
+						<div class="container">
+							<div id="searchForm">
+								<div class="row">
+									<div class="col-6 col-12-mobile" style="float: left;"><input type="text" id="searchCharacter" name="name" placeholder="캐릭터 이름 또는 번호를 입력해주세요."></div>
+									<div class="col-12" style="float: right;">
+										<input type="button" id="search" value="검색">
+									</div>
+								</div>
+							</div>
 
-            <p>2 January 2022 </p>
-            <br>
-            <ul>
-                <li>Happy New Year, あけましておめでとう, <br>새해 복 많이 받으세요, Bonne Année,
-                <br>新年快乐, Buon Anno, Gott Nytt År, <br>Frohes Neues Jahr, Feliz Año Nuevo,
-                <br>с новым годом</li>
-                <br>
-                <li>We always add stuff, to report an error<br>or to stay up to date, <a href="https://discord.gg/xhKT87vKX7" >join the Discord server</a></li>
-                <br>
-            </ul>
-            <table id="table">
-                   <p>Recently Added:</p>
-                    <tbody>
-                        <tr>
-                            <td id="newUnits">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-        </div>
-        <script>
-        const title = `원피스 트레저 크루즈 DB`;
-        const titleElement = document.getElementById("main-title");
-        let index = 0;
+						</div>
+					</section>
 
-        function typeWriter() {
-            if (index < title.length) {
-                titleElement.innerHTML += title.charAt(index);
-                index++;
-                setTimeout(typeWriter, 160); // 속도 조절 (100ms = 0.1초)
-            }
-        }
-        window.onload = typeWriter; // 페이지 로드 시 시작
-        </script>
-    </body>
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container" id="updateForm">
 
+							<header>
+								<h2 style="font-size: 45x0; font-weight: bold;">업데이트</h2>
+							</header>
+
+							<ul class="selector" id="updateUl">
+								<li>
+									<span class="tag active">업데이트</span>
+									<span class="updateInfo">ver.0.0.2 신규 캐릭터 캐럿 추가</span>
+									<span class="updateDate">2025년 7월 11일</span>
+								</li>
+								<li>
+									<span class="tag deactive">업데이트</span>
+									<span class="updateInfo">ver.0.0.2 신규 캐릭터 캐럿 추가</span>
+									<span class="updateDate">2025년 7월 11일</span>
+								</li>
+								<li>
+									<span class="tag deactive">업데이트</span>
+									<span class="updateInfo">ver.0.0.2 신규 캐릭터 캐럿 추가</span>
+									<span class="updateDate">2025년 7월 11일</span>
+								</li>
+								<li>
+									<span class="tag deactive">업데이트</span>
+									<span class="updateInfo">ver.0.0.2 신규 캐릭터 캐럿 추가</span>
+									<span class="updateDate">2025년 7월 11일</span>
+								</li>
+							</ul>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; OPTC-Database with korea.</li><li>Creator by : 고양이/하야덴</li>
+					</ul>
+
+			</div>
+			
+			<div id="modal" class="dialog">
+				<div class="tb">
+			    	<div class="inner" style="max-width:800px;">
+			      		<div class="top">
+			        		<div id="titleModal" class="title">업데이트 제목</div>
+			        		<button id="closeModal">닫기</button>
+			      		</div>
+			      		<div id="infoModal" class="ct">
+			      			업데이트 내용
+			      		</div>
+			    	</div>
+				</div>
+			</div>
+			
+			<div id="alert" class="dialog">
+				<div class="tb">
+			    	<div class="inner" style="max-width:800px;">
+			      		<div class="top">
+			        		<div id="titleAlert" class="title">안내</div>
+			        		<button id="closeAlert">닫기</button>
+			      		</div>
+			      		<div id="infoAlert">
+			      		</div>
+			    	</div>
+				</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="display/js/jquery.min.js"></script>
+			<script src="display/js/jquery.scrolly.min.js"></script>
+			<script src="display/js/jquery.scrollex.min.js"></script>
+			<script src="display/js/browser.min.js"></script>
+			<script src="display/js/breakpoints.min.js"></script>
+			<script src="display/js/util.js"></script>
+			<script src="display/js/main.js"></script>
+			<script src="display/js/search.js"></script>
+			<script src="display/js/modal.js"></script>
+
+	</body>
 </html>
