@@ -1,0 +1,155 @@
+/* Pretendard Variable 폰트 전체 적용 */
+body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+/* 메인 그라데이션 타이틀 스타일 */
+.gradient-title {
+    /* 그라데이션 텍스트 */
+    background: linear-gradient(90deg, #FA709A 0%, #FEE140 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    /* 폰트 스타일 */
+    font-size: 80px !important; /* 글자 크기 */
+    line-height: 80px !important; /* 행간 */
+    letter-spacing: -0.4px !important; /* 자간: 80px의 -0.5%는 약 -0.4px */
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+/* 보조 문구 텍스트 스타일 */
+.sub-description-text {
+    font-size: 24px; /* 글자 크기 */
+    line-height: 30px; /* 행간 */
+    letter-spacing: 5%; /* 자간 */
+    color: #555;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* 메인 헤더 스타일 */
+.main-header {
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+.main-header h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #222;
+    letter-spacing: -1px;
+    line-height: 1.3;
+}
+
+/* 보조 문구 스타일 */
+.sub-description {
+    text-align: center;
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+}
+
+/* 부제목 스타일 */
+.subtitle-section {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.subtitle-section h2 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* 부제목 위 가로선 디자인 */
+.horizontal-line {
+    width: 400px;
+    height: 4px;
+    margin: 0 auto 20px auto;
+    background: linear-gradient(90deg, #FA709A 0%, #FEE140 100%);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(250,112,154,0.08);
+}
+
+/* 버튼 리스트 영역 */
+.button-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+/* 티어리스트 버튼 스타일 */
+.tierlist-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border: 2px solid #202124;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #202124;
+    cursor: pointer;
+    transition: background 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.tierlist-btn:hover {
+    background: #f5f5f5;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* SVG 아이콘 스타일 */
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-icon svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+/* 버튼 텍스트 */
+.btn-text {
+    display: inline-block;
+}
+
+/* 반응형: 가로 800px 이하에서 폰트 크기 등 조정 */
+@media (max-width: 800px) {
+    .gradient-title {
+        font-size: 36px !important;
+        line-height: 44px !important;
+    }
+    .sub-description-text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .subtitle-section h2 {
+        font-size: 1rem;
+    }
+    .horizontal-line {
+        width: 60px;
+        height: 3px;
+        margin-bottom: 14px;
+    }
+    /* 버튼 반응형 스타일 */
+    .tierlist-btn {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+        border-radius: 6px;
+    }
+    .btn-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.tierlist-link {
+    text-decoration: none;
+}

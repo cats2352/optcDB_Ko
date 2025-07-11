@@ -1,0 +1,181 @@
+/* Pretendard Variable 폰트 전체 적용 */
+body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+/* 메인 헤더 영역 */
+.main-header-beginner {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* 메인 타이틀 스타일 */
+.main-title-beginner {
+    font-size: 3.375rem; /* 54px → 3.375rem */
+    font-weight: bold;
+    line-height: 3.75rem; /* 60px → 3.75rem */
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #FA709A 0%, #FEE140 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 6.5rem; /* 104px → 6.5rem */
+}
+
+/* S티어 영역 */
+.s-tier-section {
+    text-align: center;
+}
+
+/* S티어 타이틀 */
+.s-tier-title {
+    font-size: 3rem; /* 48px → 3rem */
+    font-weight: bold;
+    line-height: 2.9375rem; /* 47px → 2.9375rem */
+    letter-spacing: 1px;
+    background: linear-gradient(180deg, #2AF598 0%, #009EFD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 0;
+}
+
+/* S티어 아래 가로선 */
+.s-tier-line {
+    width: 120px;
+    height: 4px;
+    margin: 18px auto 0 auto;
+    background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%);
+    border-radius: 2px;
+}
+
+/* S티어 설명 텍스트 */
+.s-tier-desc {
+    font-size: 1.125rem; /* 18px → 1.125rem */
+    font-weight: 400;
+    line-height: 1.125rem; /* 18px → 1.125rem */
+    letter-spacing: 1px;
+    color: #111;
+    margin-top: 1.375rem; /* 22px → 1.375rem */
+}
+
+/* S티어 캐릭터 이미지 그리드 */
+.s-tier-image-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 112px);
+    grid-auto-rows: 112px;
+    gap: 20px 16px; /* 세로 20, 가로 16 */
+    justify-content: center;
+    margin-top: 34px;
+}
+.s-tier-img {
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* 반응형: 800px 이하에서 4열, 500px 이하에서 2열 */
+@media (max-width: 800px) {
+    .s-tier-image-grid {
+        grid-template-columns: repeat(4, 112px);
+    }
+}
+@media (max-width: 500px) {
+    .s-tier-image-grid {
+        grid-template-columns: repeat(2, 112px);
+    }
+}
+
+/* 이미지 주소가 없으면 박스 숨기기 */
+.s-tier-img[src='#'],
+.s-tier-img:not([src]),
+.s-tier-img[src=''] {
+    display: none;
+}
+
+/* A티어 영역 */
+.a-tier-section {
+    text-align: center;
+    margin-top: 89px;
+}
+.a-tier-title {
+    font-size: 3rem; /* 48px → 3rem */
+    font-weight: bold;
+    line-height: 2.9375rem; /* 47px → 2.9375rem */
+    letter-spacing: 1px;
+    background: linear-gradient(180deg, #EBBBA7 0%, #CFC7F8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 0;
+}
+.a-tier-line {
+    width: 120px;
+    height: 4px;
+    margin: 18px auto 0 auto;
+    background: linear-gradient(90deg, #EBBBA7 0%, #CFC7F8 100%);
+    border-radius: 2px;
+}
+.a-tier-desc {
+    font-size: 1.125rem; /* 18px → 1.125rem */
+    font-weight: 400;
+    line-height: 1.125rem; /* 18px → 1.125rem */
+    letter-spacing: 1px;
+    color: #111;
+    margin-top: 1.375rem; /* 22px → 1.375rem */
+}
+.a-tier-image-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 112px);
+    grid-auto-rows: 112px;
+    gap: 20px 16px;
+    justify-content: center;
+    margin-top: 34px;
+}
+.a-tier-img {
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+@media (max-width: 800px) {
+    .a-tier-image-grid {
+        grid-template-columns: repeat(4, 112px);
+    }
+}
+@media (max-width: 500px) {
+    .a-tier-image-grid {
+        grid-template-columns: repeat(2, 112px);
+    }
+}
+/* 이미지 주소가 없으면 박스 숨기기 (A티어도 동일하게) */
+.a-tier-img[src='#'],
+.a-tier-img:not([src]),
+.a-tier-img[src=''] {
+    display: none;
+}
+
+/* 800px 이하에서 전체 폰트 크기 축소 */
+@media (max-width: 800px) {
+  html {
+    font-size: 15px; /* 기본 폰트 크기 축소 */
+  }
+}
+
+/* 500px 이하에서 전체 폰트 크기 더 축소 */
+@media (max-width: 500px) {
+  html {
+    font-size: 13px; /* 모바일 등 아주 작은 화면에서 더 축소 */
+  }
+}

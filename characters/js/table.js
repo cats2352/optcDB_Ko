@@ -1202,10 +1202,10 @@
 			if (filters.tags && Object.keys(filters.tags).length > 0) {
 			const activeTags = Object.keys(filters.tags).filter(tag => filters.tags[tag]);
 			if (activeTags.length > 0) {
-				const matched = activeTags.some(tag => {
-				const tagList = window.characterTags[tag]?.characterIds || [];
-				return tagList.some(item => item.logbookId === id);
-				});
+			const matched = activeTags.some(tag => {
+			const tagList = window.characterTags[tag]?.characterIds || [];
+			return tagList.includes(id); // ← 여기에서 id는 정수형 logbookId
+			});
 			if (!matched) return false;
 			}
 }

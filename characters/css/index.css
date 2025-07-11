@@ -474,18 +474,6 @@ input#burgerMenuState {
     text-align: center;
     margin-right: 5px;
 }
-.tag-badge {
-  display: inline-block;
-  padding: 3px 8px;
-  margin: 2px;
-  border-radius: 10px;
-  font-size: 12px;
-  color: white;
-}
-.tag-cat-1 { background-color: #ff975b; } 
-.tag-cat-2 { background-color: #4bb677; } 
-.tag-cat-3 { background-color: #ff64be; } 
-.tag-cat-4 { background-color: #1f9ca0; } 
 
 .badge-japan + div, .badge-global + div, .badge-swap + div, .badge-superswap + div, .badge-base + div, .badge-level1 + div, .badge-level2 + div, .badge-level3 + div, .badge-level4 + div, .badge-level5 + div, .badge-level6 + div, .badge-sbase + div, .badge-slevel1 + div, .badge-slevel2 + div, .badge-character1 + div, .badge-character2 + div,.badge-combined + div {
     margin-bottom: 2px;
