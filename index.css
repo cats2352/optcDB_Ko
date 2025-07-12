@@ -203,6 +203,80 @@ body {
     display: inline-block;
 }
 
+/* 공지사항 버튼 스타일 */
+.notice-button-container {
+    margin-top: 30px;
+    text-align: center;
+    display: block !important;
+}
+
+.notice-button {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24) !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.notice-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    background: linear-gradient(135deg, #ee5a24, #ff6b6b) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.notice-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
+}
+
+.notice-icon {
+    font-size: 20px;
+    animation: pulse 2s infinite;
+    display: inline-block !important;
+}
+
+.notice-text {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: inline-block !important;
+    color: white !important;
+}
+
+.notice-arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+    display: inline-block !important;
+    color: white !important;
+}
+
+.notice-button:hover .notice-arrow {
+    transform: translateX(5px);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 @media only screen and (max-width: 768px) {
     body {
         font-size: 14px;
@@ -229,4 +303,18 @@ body {
         line-height: 1.2;
     }
     
+    /* 모바일에서 공지사항 버튼 스타일 */
+    .notice-button {
+        padding: 12px 20px;
+        font-size: 14px;
+        gap: 8px;
+    }
+    
+    .notice-icon {
+        font-size: 16px;
+    }
+    
+    .notice-arrow {
+        font-size: 14px;
+    }
 }
