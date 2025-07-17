@@ -1204,7 +1204,7 @@
 			if (activeTags.length > 0) {
 			const matched = activeTags.some(tag => {
 			const tagList = window.characterTags[tag]?.characterIds || [];
-			return tagList.includes(id); // ← 여기에서 id는 정수형 logbookId
+			return tagList.some(item => item.logbookId === id);
 			});
 			if (!matched) return false;
 			}

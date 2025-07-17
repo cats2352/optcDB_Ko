@@ -154,7 +154,6 @@ CharUtils.searchDropLocations = function(id) {
  * with the structure {id: number, name: string, location: object}
  */
 
-
     CharUtils.getUnitTags = function(id) {
         if (!id) return [];
 

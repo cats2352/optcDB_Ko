@@ -111,4 +111,5 @@ window.characterTags = {
   "악 블랙 드럼 왕국": {"category": 1, "characterIds": [{"logbookId": 4271}]},
   "세계경제신문사": {"category": 1, "characterIds": [{"logbookId": 4272}]},
   "오로성": {"category": 2, "characterIds": [{"logbookId": 4379}, {"logbookId": 4380}]},
-  "록스 해적단": {"category": 1, "characterIds": [{"logbookId": 4388}, {"logbookId": 4389}, {"logbookId": 4390}]}}
+  "록스 해적단": {"category": 1, "characterIds": [{"logbookId": 4388}, {"logbookId": 4389}, {"logbookId": 4390}]}
+};
