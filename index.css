@@ -277,6 +277,39 @@ body {
     }
 }
 
+/* 하늘색 그라데이션 버튼 스타일 */
+.sky-gradient-button {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #1e53e4, #13a3e6) !important; /* 더 밝은 하늘색 그라데이션 */
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(161, 196, 253, 0.3);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    z-index: 10;
+    margin-top: 18px; /* 공지사항 버튼과의 간격 */
+}
+
+.sky-gradient-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(161, 196, 253, 0.4);
+    background: linear-gradient(135deg, #c2e9fb, #a1c4fd) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.sky-gradient-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(161, 196, 253, 0.3);
+}
+
 @media only screen and (max-width: 768px) {
     body {
         font-size: 14px;

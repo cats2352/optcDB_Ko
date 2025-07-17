@@ -278,6 +278,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.cooldown = window.cooldowns[id - 1];
     $scope.evolution = window.evolutions[id];
     $scope.families = window.families[id];
+    $scope.unit.tags =  CharUtils.getUnitTags(id);/* 태그 코드 추가 */
     $scope.farmableVersions = CharUtils.getFarmableVersions(id);
     $scope.displayFamily = ($scope.families) ? $scope.families.join(' & ') : '';
 

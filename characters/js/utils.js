@@ -153,6 +153,35 @@ CharUtils.searchDropLocations = function(id) {
  * @returns {Object[]|null} Array of objects of farmable versions of the unit
  * with the structure {id: number, name: string, location: object}
  */
+
+
+    CharUtils.getUnitTags = function(id) {
+        if (!id) return [];
+
+        var parsedId = parseInt(id, 10);
+        if (!parsedId) return [];
+
+        var tags = [];
+
+        angular.forEach(window.characterTags, function(value, key) {
+            if (value.characterIds) {
+                for (var i = 0; i < value.characterIds.length; i++) {
+                    if (value.characterIds[i].logbookId === parsedId) {
+                        tags.push({ 
+                            name: key, 
+                            category: value.category,
+                            childIndex: value.characterIds[i].childIndex
+                        });
+                        // break;   ← 이 줄 없애기!
+                    }
+                }
+            }
+        });
+
+        return tags;
+    };
+
+
 CharUtils.getFarmableVersions = function (id) {
     id = Number(id);
     let families = window.families[id];
