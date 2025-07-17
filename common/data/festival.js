@@ -4403,6 +4403,10 @@ window.festival = [
 	["DBF", 50, 100],
 	["", null, null],
 	["RCV", 50, 100],
+	["DBF", 209, 147],
+	["ATK", 50, 100],
+	["SPT", 50, 100],
+	["DBF", 184, 187],
 	["", null, null],
 	["", null, null],
 	["", null, null],
@@ -5002,3 +5006,6 @@ window.festival = [
 ];
 // ["Class", DEF, SPD ],
 // Make sure all characters have valid or NULL values for each value, don't just use empty arrays for placeholders
+
+// [타입", 방어력, 스피드],
+//로 구성되어 있으며 해당 값들은 따로 MstCharacter_테이블의 piratesDefense_, piratesSpeed_ 값들로 확인할 수 있다.
