@@ -176,3 +176,93 @@ a { color: #8acccf; }
     }
     
 }
+
+/* ===== 페이지네이션 심플+컴팩트+반응형 ===== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 14px 0 8px 0;
+    font-size: 1em;
+    user-select: none;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    max-width: 100vw;
+}
+
+.pagination li {
+    display: inline-block;
+    margin: 0 1px;
+}
+
+.pagination a,
+.pagination span {
+    background: none !important;
+    color: #888 !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-weight: 400;
+    min-width: 24px;
+    text-align: center;
+    padding: 0 4px;
+    border-radius: 50%;
+    transition: color 0.2s, background 0.2s;
+    font-size: 1em;
+}
+
+.pagination .active a,
+.pagination .active span {
+    color: #8acccf !important;
+    font-weight: bold;
+    background: none !important;
+}
+
+.pagination a:hover:not(.active) {
+    color: #222 !important;
+    background: #f0f0f0 !important;
+}
+
+.pagination .disabled a,
+.pagination .disabled span {
+    color: #ccc !important;
+    cursor: default !important;
+}
+
+.pagination .prev a,
+.pagination .next a {
+    font-size: 1.2em;
+    color: #bbb !important;
+    background: none !important;
+    border: none !important;
+    vertical-align: middle;
+    padding: 0 6px;
+}
+
+.pagination .prev a:hover,
+.pagination .next a:hover {
+    color: #888 !important;
+    background: none !important;
+}
+
+@media (max-width: 600px) {
+  .pagination {
+    font-size: 0.95em;
+    gap: 2px;
+    padding: 0 2vw;
+    max-width: 98vw;
+  }
+  .pagination a, .pagination span {
+    min-width: 18px;
+    padding: 0 2px;
+    font-size: 0.95em;
+  }
+  .pagination .prev a, .pagination .next a {
+    font-size: 1em;
+    padding: 0 2px;
+  }
+}
+/* 한글 주석: 페이지네이션 컴팩트+반응형 적용 완료 */
