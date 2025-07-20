@@ -561,47 +561,47 @@
 					"</span>";
 				htmlToAppend +=
 					'<span class="tag flag">' +
-					(CharUtils.isFarmable(id) ? "Farmable" : "Non-farmable") +
+					(CharUtils.isFarmable(id) ? "획득가능(교환소 등)" : "일반 획득불가") +
 					"</span>";
 				if (flags.rr)
-					htmlToAppend += '<span class="tag flag">Rare Recruit only</span>';
+					htmlToAppend += '<span class="tag flag">페스 전용 캐릭터</span>';
 				if (flags.lrr)
 					htmlToAppend +=
-						'<span class="tag flag">Limited Rare Recruit only</span>';
+						'<span class="tag flag">한정 스고페스 전용 캐릭터</span>';
 				if (flags.tmlrr)
 					htmlToAppend +=
-						'<span class="tag flag">Treasure Map Sugo-fest Limited Rare Recruit only</span>';
+						'<span class="tag flag">트맵 스고페스 한정캐릭터</span>';
 				if (flags.kclrr)
 					htmlToAppend +=
-						'<span class="tag flag">Kizuna Clash Sugo-fest Limited Rare Recruit only</span>';
+						'<span class="tag flag">유대 스고페스 한정캐릭터</span>';
 				if (flags.pflrr)
 					htmlToAppend +=
-						'<span class="tag flag">Pirate Rumble Sugo-fest Limited Rare Recruit only</span>';
+						'<span class="tag flag">해적제 스고페스 한정캐릭터</span>';
 				if (flags.superlrr)
 					htmlToAppend +=
-						'<span class="tag flag">Super Sugo-fest Limited Rare Recruit only</span>';
+						'<span class="tag flag">초스고페스 한정캐릭터</span>';
 				if (flags.slrr)
 					htmlToAppend +=
-						'<span class="tag flag">Support Sugo-fest Limited Rare Recruit only</span>';
+						'<span class="tag flag">서포트 스고페스 한정캐릭터</span>';
 				if (flags.superlrr)
 					htmlToAppend +=
-						'<span class="tag flag">Super Sugo-fest Limited Rare Recruit only</span>';
+						'<span class="tag flag">초스고페스 한정캐릭터</span>';
 				if (flags.annilrr)
 					htmlToAppend +=
-						'<span class="tag flag">Anniversary Sugo-fest Limited Rare Recruit only</span>';
+						'<span class="tag flag">주년 스고페스 한정캐릭터</span>';
 				if (flags.promo)
-					htmlToAppend += '<span class="tag flag">Promo-code only</span>';
+					htmlToAppend += '<span class="tag flag">프로모션 코드 한정캐릭터</span>';
 				if (flags.shop)
-					htmlToAppend += '<span class="tag flag">Rayleigh Shop Unit</span>';
+					htmlToAppend += '<span class="tag flag">레일리샵 한정 캐릭터</span>';
 				if (flags.tmshop)
-					htmlToAppend += '<span class="tag flag">Trade Port Unit</span>';
+					htmlToAppend += '<span class="tag flag">교환소 한정 캐릭터</span>';
 				if (flags.special)
 					htmlToAppend +=
-						'<span class="tag flag">One time only characters</span>';
+						'<span class="tag flag">로그인 보너스 한정 캐릭터</span>';
 				if (flags.inkable)
 					htmlToAppend += '<span class="tag flag">Inkable</span>';
 				if (CharUtils.checkFarmable(id, { "Story Island": true }))
-					htmlToAppend += '<span class="tag flag">Story mode only</span>';
+					htmlToAppend += '<span class="tag flag">스토리 모드 캐릭터</span>';
 				if (CharUtils.checkFarmable(id, { Fortnight: true }))
 					htmlToAppend += '<span class="tag flag">Fortnight only</span>';
 				if (CharUtils.checkFarmable(id, { Raid: true }))
@@ -609,7 +609,7 @@
 				if (CharUtils.checkFarmable(id, { Arena: true }))
 					htmlToAppend += '<span class="tag flag">Arena only</span>';
 				if (CharUtils.checkFarmable(id, { Treasure: true }))
-					htmlToAppend += '<span class="tag flag">Treasure Map only</span>';
+					htmlToAppend += '<span class="tag flag">트레저 맵 캐릭터</span>';
 				if (
 					CharUtils.checkFarmable(id, { "Story Island": true, Fortnight: true })
 				)
