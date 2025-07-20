@@ -266,15 +266,3 @@ a { color: #8acccf; }
   }
 }
 /* 한글 주석: 페이지네이션 컴팩트+반응형 적용 완료 */
-
-/* ===== Pretendard 폰트 강제 적용 (모바일 포함) ===== */
-html, body, .filter, .filter-header, .modal-header, .modal-footer, .modal-body, .pagination, .pagination a, .pagination span, #mainTable, #leftContainer, #queryContainer, #tableContainer {
-    font-family: 'Pretendard', 'PT Sans', Arial, sans-serif !important;
-}
-
-@media (max-width: 600px) {
-  html, body, .filter, .filter-header, .modal-header, .modal-footer, .modal-body, .pagination, .pagination a, .pagination span, #mainTable, #leftContainer, #queryContainer, #tableContainer {
-    font-family: 'Pretendard', 'PT Sans', Arial, sans-serif !important;
-  }
-}
-/* 한글 주석: Pretendard 폰트 모바일 포함 전체 강제 적용 */
