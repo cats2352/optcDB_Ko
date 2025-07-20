@@ -1612,7 +1612,7 @@ unit > a {
 }
 
 /* ===== Pretendard 폰트 강제 적용 (모바일 포함) ===== */
-html, body, .filter, .filter-header, .modal-header, .modal-footer, .modal-body, .pagination, .pagination a, .pagination span, #mainTable, #leftContainer, #queryContainer, #tableContainer {
+html, body, * {
     font-family: 'Pretendard', 'PT Sans', Arial, sans-serif !important;
 }
 
