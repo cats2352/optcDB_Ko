@@ -93,37 +93,6 @@
                                     <td ng-if="!compare" colspan="{{::hybrid ? 2 : 1}}">{{::unit.maxEXP | number}}</td>
                                     <td ng-if="compare" colspan="{{::hybrid ? 2 : 1}}" comparison="negative">{{unit.maxEXP - compare.maxEXP | number}}</td>
                                 </tr>
-
-                                <tr ng-if="unit.tags && unit.tags.length">
-                                    <th>태그</th>
-                                    <td colspan="4">
-                                    
-                                      <!-- 부모 캐릭터 태그 -->
-                                      <div ng-if="(unit.tags | filter:{childIndex:'!'}).length">
-                                     
-                                        <span ng-repeat="tag in unit.tags | filter:{childIndex:undefined}" class="tag-badge tag-cat-{{tag.category}}">
-                                          {{ tag.name }}
-                                        </span>
-                                      </div>
-                                  
-                                      <!-- 첫번째 캐릭터 태그 -->
-                                      <div ng-if="(unit.tags | filter:{childIndex:0}).length">
-                                        <strong>첫번째 캐릭터 태그</strong><br>
-                                        <span ng-repeat="tag in unit.tags | filter:{childIndex:0}" class="tag-badge tag-cat-{{tag.category}}">
-                                          {{ tag.name }}
-                                        </span>
-                                      </div>
-                                  
-                                      <!-- 두번째 캐릭터 태그 -->
-                                      <div ng-if="(unit.tags | filter:{childIndex:1}).length">
-                                        <strong>두번째 캐릭터 태그</strong><br>
-                                        <span ng-repeat="tag in unit.tags | filter:{childIndex:1}" class="tag-badge tag-cat-{{tag.category}}">
-                                          {{ tag.name }}
-                                        </span>
-                                      </div>
-                                  
-                                    </td>
-                                  </tr>
                             </tbody>
                         </table>
                     </div>
@@ -1291,8 +1260,6 @@
                         <button class="btn btn-default" title="진화" scroll-to-section="evolutionSection" ng-if="evolution.evolution" ng-hide="hidden.evolution"><i class="fas fa-seedling"></i></button>
                         <button class="btn btn-default" title="진화" scroll-to-section="evolutionFromSection" ng-if="evolvesFrom.length > 0 && !evolution.evolution" ng-hide="hidden.evolutionFrom"><i class="fas fa-seedling"></i></button>
                         <button class="btn btn-default" title="태그" scroll-to-section="tagsSection"><i class="fas fa-tag"></i></button>
-                        <!-- 닫기 버튼 추가 -->
-                        <button class="btn btn-danger" ui-sref="^"><i class="fas fa-times"></i> 닫기</button>
                     </div>
                 </div>
 

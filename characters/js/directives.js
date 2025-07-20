@@ -110,20 +110,20 @@
 				};
 				// report link
 				var link = $(
-					'<span class="help-link"></i><a>문의사항은 원피스트레저크루즈 갤러리에 들어오세요.</a></span>'
+					'<span class="help-link"><i class="fab fa-discord"></i> 혹시 무슨 문제가 있으신가요? <a>원피스트레저크루즈 갤러리에 들어오세요.</a>.</span>'
 				);
 				link.find("a").attr("href", "https://gall.dcinside.com/mgallery/board/lists?id=onepiecetc");
 				link.insertAfter($(".dataTables_length"));
 				// pick column link
 				var pick = $(
-					// '<a id="pick-link" popover-placement="bottom" popover-trigger="click" popover-title="Additional Columns" ' +
-					// 	"uib-popover-template=\"'views/pick.html'\" popover-append-to-body=\"'true'\">추가 열 보이기</a>"
-				);// 잠시 주석처리함
+					'<a id="pick-link" popover-placement="bottom" popover-trigger="click" popover-title="Additional Columns" ' +
+						"uib-popover-template=\"'views/pick.html'\" popover-append-to-body=\"'true'\">추가 열 보이기</a>"
+				);
 				$compile(pick)(scope);
 				pick.insertAfter($(".dataTables_length"));
 				// night toggle
 				var nightToggle = $(
-					// '<label class="night-toggle"><input type="checkbox">라이트 모드</input></label>' 잠시 주석처리함
+					'<label class="night-toggle"><input type="checkbox">라이트 모드</input></label>'
 				);
 				nightToggle.find("input").change(function (e) {
 					$rootScope.nightMode = e.target.checked;

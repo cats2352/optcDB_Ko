@@ -20,198 +20,30 @@ transform: scale(1, -1);
 	font-style: normal;
 }
 
-/* =====================
-   🌙 다크 테마 전체 적용 (전체 스타일 오버라이드)
-   ===================== */
-
 body, html {
     height: 100%;
     font-family: 'PT Sans', sans-serif;
-    background: #181a1b; /* 다크 배경 */
-    color: #e0e0e0;      /* 밝은 글자 */
     overflow-y: hidden;
-    font-size: 16px;
-    line-height: 1.6;
-    letter-spacing: 0.01em;
 }
 
-#mainContainer, #leftContainer, #tableContainer, #mainTable_wrapper {
-    background: #232526;
-    color: #e0e0e0;
-}
-
-/* 입력창, 버튼 다크 스타일 */
 #queryContainer {
     padding: 10px;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     flex: 0 0 auto;
-    background: #232526;
-    border-bottom: 1px solid #333;
 }
+
 #queryContainer > input {
     flex: 1;
-    background: #232526;
-    color: #e0e0e0;
-    border: 1px solid #333;
-    border-radius: 6px;
-    padding: 8px;
 }
+
 #queryContainer > button {
-    padding: 8px 16px;
+    padding: 8px;
     font-weight: bold;
-    background: #232526;
-    color: #e0e0e0;
-    border: 1px solid #444;
-    border-radius: 6px;
-    margin-left: 8px;
-    transition: background 0.2s, color 0.2s;
-}
-#queryContainer > button:hover {
-    background: #333;
-    color: #fff;
-    text-decoration: underline;
-}
-
-/* 사이드바 필터창 - 깔끔하고 간결하게 */
-#leftContainer {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    background: #202224;
-    border-right: 1px solid #333;
-    min-width: 240px;
-    max-width: 320px;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.12);
-}
-.filter-header {
-    display: block;
-    padding: 10px 12px;
-    text-align: left;
-    background: #293338;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.1em;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #222;
-    letter-spacing: 0.5px;
-}
-.filter {
-    display: block;
-    padding: 8px 14px;
-    margin: 0 0 2px 0;
-    background: #232526;
-    color: #e0e0e0;
-    border-radius: 8px;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-}
-.filter.active, .filter.selected {
-    background: #3a3f44;
-    color: #ffe082;
-    font-weight: bold;
-}
-.filter:hover {
-    background: #333;
-    color: #fff;
-}
-.filter.custom {
-    padding: 0px;
-    cursor: default;
     background: none;
+    border: none;
 }
-
-/* 필터 그룹 헤더 */
-#leftContainer .filter-group-header {
-    background: #232526 !important;
-    color: #ffe082 !important;
-    font-weight: bold;
-    border-bottom: 1px solid #333;
-}
-
-/* 필터 옵션(서브매처) */
-#leftContainer .submatchers .submatcher-option {
-    border-radius: 8px;
-    padding: 5px 10px;
-    background-color: #232526;
-    color: #e0e0e0;
-    margin: 2px 4px 2px 0;
-    font-size: 0.97em;
-    border: 1px solid #333;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-}
-#leftContainer .submatchers .submatcher-option.active {
-    background: #3a3f44;
-    color: #ffe082;
-    font-weight: bold;
-    border: 1px solid #ffe082;
-}
-#leftContainer .submatchers .submatcher-option:hover {
-    background: #333;
-    color: #fff;
-}
-
-/* 테이블 다크 스타일 */
-#mainTable {
-    background: #232526;
-    color: #e0e0e0;
-    border-collapse: separate;
-    border-spacing: 0;
-    width: 100%;
-}
-#mainTable th, #mainTable td {
-    background: #232526;
-    color: #e0e0e0;
-    border-bottom: 1px solid #333;
-    padding: 10px 8px;
-}
-#mainTable th {
-    background: #232526;
-    color: #8acccf;
-    font-weight: bold;
-    font-size: 1.05em;
-    border-bottom: 2px solid #444;
-}
-#mainTable tr:hover {
-    background: #292c2f;
-}
-
-
-
-/* 스크롤바 다크 스타일 */
-::-webkit-scrollbar {
-    width: 10px;
-    background: #232526;
-}
-::-webkit-scrollbar-thumb {
-    background: #333;
-    border-radius: 8px;
-}
-
-/* 링크, 버튼, 강조 색상 */
-a, .clickable, .filter.active, .submatcher-option.active {
-    color: #8acccf !important;
-}
-
-/* 모바일 대응 */
-@media (max-width: 767px) {
-    #mainContainer, #leftContainer, #tableContainer, #mainTable_wrapper {
-        background: #181a1b;
-    }
-    #leftContainer {
-        min-width: 0;
-        max-width: none;
-    }
-    #queryContainer {
-        background: #181a1b;
-    }
-}
-
-/* 한글 주석: 다크 테마 적용 완료 */
 
 @media (hover) {
     #queryContainer > button:hover {
@@ -642,19 +474,6 @@ input#burgerMenuState {
     text-align: center;
     margin-right: 5px;
 }
-/* 태그 코드 추가 */
-    .tag-badge {
-        display: inline-block;
-        padding: 3px 8px;
-        margin: 2px;
-        border-radius: 10px;
-        font-size: 12px;
-        color: white;
-    }
-    .tag-cat-1 { background-color: #ff975b; } 
-    .tag-cat-2 { background-color: #4bb677; } 
-    .tag-cat-3 { background-color: #ff64be; } 
-    .tag-cat-4 { background-color: #1f9ca0; } 
 
 .badge-japan + div, .badge-global + div, .badge-swap + div, .badge-superswap + div, .badge-base + div, .badge-level1 + div, .badge-level2 + div, .badge-level3 + div, .badge-level4 + div, .badge-level5 + div, .badge-level6 + div, .badge-sbase + div, .badge-slevel1 + div, .badge-slevel2 + div, .badge-character1 + div, .badge-character2 + div,.badge-combined + div {
     margin-bottom: 2px;
@@ -705,7 +524,7 @@ input#burgerMenuState {
 .stars-3:after  { color: #cccccc; content: '\2605\2605\2605'; }
 
 .stars-4:before { color: #f28e00; content: '\2605\2605\2605\2605'; }
-.stars-4:after  { color: #cccccc; content: '\2605'; }
+.stars-4:after  { color: #cccccc; content: '\2605\2605'; }
 
 *[class~="stars-4+"]:before { color: #AC6500; content: '\2605\2605\2605\2605\002B'; }
 
@@ -1220,7 +1039,6 @@ tr.preview td:nth-child(2) > a:after {
     width: 100%;
     overflow-y: scroll;
     text-align: center;
-    color: #222 !important;
 }
 
 .modal-body td {
@@ -1242,7 +1060,7 @@ tr.preview td:nth-child(2) > a:after {
 .modal-header,
 .modal-footer {
     background-color: #428bca;
-    color: rgb(2, 2, 2);
+    color: white;
 }
 
 .modal-footer {
@@ -1498,115 +1316,4 @@ unit > a {
 }
 .active.tag-category-4 {
   color: #ce93d8 !important;
-}
-
-/* ===== 모달(팝업) 화이트 스타일 리디자인 ===== */
-.popup, .modal-content {
-    background: #fff !important;
-    color: #222 !important;
-    border-radius: 12px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-    position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    max-width: 95vw;
-    width: 100%;
-    min-width: 320px;
-    box-sizing: border-box;
-    z-index: 1100;
-    margin: 0;
-    padding: 0;
-    max-height: 100vh;
-    overflow: visible !important;
-}
-.modal-header {
-    background: #f7f7f7 !important;
-    color: #222 !important;
-    border-bottom: 1px solid #e0e0e0;
-    border-radius: 12px 12px 0 0;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 16px 20px !important;
-}
-.modal-footer {
-    background: #f7f7f7 !important;
-    color: #222 !important;
-    border-top: 1px solid #e0e0e0;
-    border-radius: 0 0 12px 12px;
-    padding: 12px 20px !important;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
-.modal-body {
-    background: #fff !important;
-    color: #222 !important;
-    overflow-y: auto !important;
-    max-height: 70vh;
-    padding: 20px 16px !important;
-    text-align: left;
-}
-.popup button, .modal-content button, .modal-footer button {
-    background: #f5f5f5;
-    color: #222;
-    border: 1px solid #bbb;
-    border-radius: 6px;
-    padding: 8px 16px;
-    font-weight: bold;
-    transition: background 0.2s, color 0.2s;
-    cursor: pointer;
-}
-.popup button:hover, .modal-content button:hover, .modal-footer button:hover {
-    background: #e0e0e0;
-    color: #000;
-}
-@media (max-width: 600px) {
-  .popup, .modal-content {
-    min-width: 0;
-    width: 98vw;
-    max-width: 98vw;
-    max-height: 99vh;
-    border-radius: 8px;
-    font-size: 15px;
-  }
-  .modal-header, .modal-footer, .modal-body {
-    padding: 10px 4px !important;
-  }
-  .modal-body {
-    max-height: 60vh;
-  }
-}
-@media (max-width: 400px) {
-  .popup, .modal-content {
-    font-size: 14px;
-    border-radius: 4px;
-  }
-}
-/* 한글 주석: 모달 화이트 스타일 리디자인 완료 */
-
-/* ===== 모달 내부 여백 없이 딱 맞게 ===== */
-.popup, .modal-content {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    max-height: 95vh;
-    min-height: 0;
-}
-
-.modal-header {
-    flex: 0 0 auto;
-}
-
-.modal-body {
-    flex: 1 1 auto;
-    overflow-y: auto !important;
-    min-height: 0;
-    max-height: none;
-    padding: 20px 16px !important;
-}
-
-.modal-footer {
-    flex: 0 0 auto;
 }
