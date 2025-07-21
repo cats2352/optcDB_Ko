@@ -4147,7 +4147,7 @@
 					},
 					{
 						type: "option",
-						description: "특정 봉쇄",
+						description: "필살기 봉쇄",
 						regex: /Special Bind/i,
 						groups: [1],
 						cssClasses: ["min-width-6"],
@@ -6198,7 +6198,7 @@
 
 			{
 				//name: "Silence (IGN: Special Bind)",
-				name: "특정 봉쇄",
+				name: "필살기 봉쇄",
 				targets: [
 					"captain",
 					"special",
