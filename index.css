@@ -271,7 +271,7 @@ body {
   .carousel-section {
     width: 100%;
     max-width: 1200px;
-    aspect-ratio: 3 / 1; /* 1200:400 = 3:1 비율 고정 */
+    aspect-ratio: 3 / 1; /* 1200:400 = 3:1 비율 고정 */ /*이때 이미지 크기는 무조건 1200 px x 400px를 맞춰야지 알맞게 표시됨 */
     min-height: unset;
     height: 400px;
     margin: 40px auto 0 auto;
