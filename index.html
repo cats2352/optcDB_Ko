@@ -1,169 +1,109 @@
-<!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>원피스 트레저 크루즈 데이터베이스</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="display/css/main.css" />
-		<link rel="stylesheet" href="index.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메인페이지</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="svg/logo.png" alt="로고" />
+    </div>
+    <!-- 햄버거/X 아이콘 버튼 -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="메뉴 열기/닫기"></button>
+    <ul class="navbar-menu" id="navbarMenu">
+      <li><a href="damage" target="_blank">데미지 계산기</a></li>
+      <li><a href="characters" target="_blank">캐릭터DB</a></li>
+      <li><a href="https://hayaden.github.io/optc-ships/" target="_blank">선박 DB</a></li>
+      <li><a href="https://cats2352.github.io/optcSupportDB//" target="_blank">서포트 캐릭터 DB</a></li>
+      <li><a href="https://thepiebandit.github.io/optc-pirate-rumble-db/" target="_blank">해적제 캐릭터DB</a></li>
+      <li><a href="title23/title.html" target="_blank">칭호 DB</a></li>
+      <li><a href="https://gall.dcinside.com/mgallery/board/lists/?id=onepiecetc" target="_blank">원트크 갤러리</a></li>
+      <li><a href="https://cafe.naver.com/bneoptc" target="_blank">네이버 공식카페</a></li>
+      <li><a href="newbe" target="_blank">뉴비 출항가이드</a></li>
+    </ul>
+  </nav>
+  <!-- 메인 텍스트 영역 -->
+  <main class="main-section">
+    <h1 class="main-title">
+      <span class="gradient-text">캐릭터 데이터의 전부</span>
+    </h1>
+    <p class="main-subtitle">빠르고 간편하게</p>
+    <p class="sub-desc">4000개가 넘는 캐릭터의 정보<br>정확하고 빠르게 찾아보세요!</p>
+  </main>
+  <!-- 케러셀 상단 버튼 영역 -->
+  <div class="carousel-top-btns">
+    <a href="characters" class="carousel-btn-link">캐릭터 DB 바로가기</a>
+    <a href="https://cats2352.github.io/OPTC-notice.KOR/" class="carousel-btn-link">공지사항 바로가기</a>
+  </div>
+  <!-- 케러셀(슬라이더) 영역 -->
+  <section class="carousel-section">
+    <div class="carousel-track">
+      <div class="carousel-slide active">
+        <picture>
+          <source media="(max-width: 600px)" srcset="./svg/신규캐릭터추가600px.png">
+          <img src="./svg/신규캐릭터추가.png" alt="이미지1" />
+        </picture>
+      </div>
+  </section>
+  <script>
+    // 햄버거/X 아이콘 동적 변경 및 메뉴 열고 닫기
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navbarMenu = document.getElementById('navbarMenu');
+    let menuOpen = false;
+    function updateHamburgerIcon() {
+      if (menuOpen) {
+        hamburgerBtn.style.backgroundImage = "url('svg/X.svg')";
+      } else {
+        hamburgerBtn.style.backgroundImage = "url('svg/ham.svg')";
+      }
+    }
+    hamburgerBtn.addEventListener('click', function() {
+      menuOpen = !menuOpen;
+      navbarMenu.classList.toggle('active', menuOpen);
+      updateHamburgerIcon();
+    });
+    // 초기 아이콘 설정
+    updateHamburgerIcon();
 
-		<!-- Header -->
-			<div id="header">
-
-				<!-- mobile mode -->
-				<div class="top">
-					<nav id="nav1">
-					<ul>
-						<li><a href="damage" id="top-link"><span class="icon solid fa-th">데미지 계산기</span></a></li>
-						<li><a href="characters" id="portfolio-link"><span class="icon solid fa-th">캐릭터DB</span></a></li>
-						<li><a href="https://hayaden.github.io/optc-ships/" id="about-link"><span class="icon solid fa-th">선박 DB리스트</span></a></li>
-						<li><a href="https://cats2352.github.io/optcSupportDB//" id="contact-link"><span class="icon solid fa-th">서포트 캐릭터 DB리스트</span></a></li>
-						<li><a href="https://thepiebandit.github.io/optc-pirate-rumble-db/" id="contact-link"><span class="icon solid fa-th">해적제 캐릭터DB</span></a></li>
-						<li><a href="title23/title.html" id="contact-link"><span class="icon solid fa-th">칭호 DB리스트</span></a></li>
-						<li><a href="https://gall.dcinside.com/mgallery/board/lists/?id=onepiecetc" id="contact-link"><span class="icon solid fa-th">원트크 갤러리</span></a></li>
-						<li><a href="https://cafe.naver.com/bneoptc" id="contact-link"><span class="icon solid fa-th">네이버 공식카페</span></a></li>
-						<li><a href="newbe" id="contact-link"><span class="icon solid fa-th">뉴비 출항가이드</span></a></li>
-					</ul>
-					</nav>
-				</div>
-
-				<div class="bottom">
-
-				</div>
-			</div>
-			
-			<!-- PC mode -->
-			<div style="width: 100%;">
-				<div id="demo-header">
-					<div class="left">
-						<ul class="selector">
-							<li class="active"><a href="damage" id="top-link"><span class="icon solid">데미지 계산기</span></a></li>
-							<li data-width="" data-height="768"><a href="characters" id="portfolio-link"><span class="icon solid">캐릭터DB</span></a></li>
-							<li data-width="" data-height="1000"><a href="https://hayaden.github.io/optc-ships/" id="about-link"><span class="icon solid">선박 DB리스트</span></a></li>
-							<li data-width="" data-height="568"><a href="https://cats2352.github.io/optcSupportDB//" id="contact-link"><span class="icon solid">서포트 캐릭터 DB리스트</span></a></li>
-							<li data-width="" data-height="568"><a href="https://thepiebandit.github.io/optc-pirate-rumble-db/" id="contact-link"><span class="icon solid">해적제 캐릭터DB</span></a></li>
-							<li data-width="" data-height="568"><a href="title23/title.html" id="contact-link"><span class="icon solid">칭호 DB리스트</span></a></li>
-							<li data-width="" data-height="568"><a href="https://gall.dcinside.com/mgallery/board/lists/?id=onepiecetc" id="contact-link"><span class="icon solid">원트크 갤러리</span></a></li>
-							<li data-width="" data-height="568"><a href="https://cafe.naver.com/bneoptc" id="contact-link"><span class="icon solid">네이버 공식카페</span></a></li>
-							<li><a href="newbe" id="contact-link"><span class="icon solid fa-th">뉴비 출항가이드</span></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-		<!-- Main -->
-			<div id="main">
-
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
-							<div class="div-main">
-								<span class="div-span">
-									모든 캐릭터의 정보
-								</span>
-							</div>
-							<div class="div-main">
-								<span class="div-span2">
-									편리하고, 정확하게
-								</span>
-								<!-- <img alt="" src="display/images/main_img.png"> -->
-							</div>
-							<div>
-								<span>
-									원하는 캐릭터를 손쉽게 검색하고 정보를 쉽게 얻으세요.
-								</span>
-							</div>
-
-							<header style="color: #000;">
-								<h2 class="alt" style="font-size: 20px; font-weight: bold;">원하는 캐릭터를 손쉽게 검색하고 정보를 쉽게 얻으세요.</h2>
-								<h2 class="alt" style="font-size: 20px; font-weight: bold;">OPTC - DataBase with korea</h2>
-							</header>
-							
-							<!-- 공지사항 바로가기 버튼 -->
-							<div class="notice-button-container">
-								<a href="https://cats2352.github.io/OPTC-notice.KOR/" class="notice-button" target="_blank">
-									<span class="notice-icon">📢</span>
-									<span class="notice-text">공지사항</span>
-									<span class="notice-arrow">→</span>
-								</a>
-								<!-- 하늘색 그라데이션 버튼 추가 -->
-								<a href="https://cats2352.github.io/optcDB_Ko/characters/#/search/" class="sky-gradient-button" target="_blank">
-									<span class="notice-icon">📝</span>
-									<span class="notice-text">캐릭터DB 바로가기</span>
-									<span class="notice-arrow">→</span>
-								</a>
-							</div>
-						</div>
-					</section>
-					
-					<section id="contact" class="four">
-						<div class="container">
-							<div id="searchForm">
-								<div class="row">
-									<div class="col-6 col-12-mobile" style="float: left;"><input type="text" id="searchCharacter" name="name" placeholder="캐릭터 이름 또는 번호를 입력해주세요."></div>
-									<div class="col-12" style="float: right;">
-										<input type="button" id="search" value="검색">
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</section>
-
-		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; OPTC-Database with korea.</li><li>Creator by : 고양이/하야덴</li>
-					</ul>
-
-			</div>
-			
-			<div id="modal" class="dialog">
-				<div class="tb">
-			    	<div class="inner" style="max-width:800px;">
-			      		<div class="top">
-			        		<div id="titleModal" class="title">업데이트 제목</div>
-			        		<button id="closeModal">닫기</button>
-			      		</div>
-			      		<div id="infoModal" class="ct">
-			      			업데이트 내용
-			      		</div>
-			    	</div>
-				</div>
-			</div>
-			
-			<div id="alert" class="dialog">
-				<div class="tb">
-			    	<div class="inner" style="max-width:800px;">
-			      		<div class="top">
-			        		<div id="titleAlert" class="title">안내</div>
-			        		<button id="closeAlert">닫기</button>
-			      		</div>
-			      		<div id="infoAlert">
-			      		</div>
-			    	</div>
-				</div>
-			</div>
-
-		<!-- Scripts -->
-			<script src="display/js/jquery.min.js"></script>
-			<script src="display/js/jquery.scrolly.min.js"></script>
-			<script src="display/js/jquery.scrollex.min.js"></script>
-			<script src="display/js/browser.min.js"></script>
-			<script src="display/js/breakpoints.min.js"></script>
-			<script src="display/js/util.js"></script>
-			<script src="display/js/main.js"></script>
-			<script src="display/js/search.js"></script>
-			<script src="display/js/modal.js"></script>
-
-	</body>
+    // ===== 케러셀(슬라이더) 동작 =====
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let currentSlide = 0;
+    function showSlide(idx) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === idx);
+      });
+    }
+    prevBtn.addEventListener('click', function() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    });
+    nextBtn.addEventListener('click', function() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    });
+    // 터치 스와이프(모바일) 지원
+    let startX = null;
+    const track = document.querySelector('.carousel-track');
+    track.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+    });
+    track.addEventListener('touchend', function(e) {
+      if (startX === null) return;
+      let endX = e.changedTouches[0].clientX;
+      if (endX - startX > 40) {
+        prevBtn.click();
+      } else if (startX - endX > 40) {
+        nextBtn.click();
+      }
+      startX = null;
+    });
+    // 첫 슬라이드 표시
+    showSlide(currentSlide);
+  </script>
+</body>
 </html>
