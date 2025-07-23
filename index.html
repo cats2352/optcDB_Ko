@@ -46,7 +46,18 @@
           <source media="(max-width: 600px)" srcset="./svg/신규캐릭터추가600px.png">
           <img src="./svg/신규캐릭터추가.png" alt="이미지1" />
         </picture>
+        <button class="carousel-btn prev" aria-label="이전 이미지">&#60;</button>
+        <button class="carousel-btn next" aria-label="다음 이미지">&#62;</button>
       </div>
+      <div class="carousel-slide">
+        <picture>
+          <source media="(max-width: 600px)" srcset="./svg/메인페이지추가600px.png">
+          <img src="./svg/메인페이지추가.png" alt="이미지2" />
+        </picture>
+        <button class="carousel-btn prev" aria-label="이전 이미지">&#60;</button>
+        <button class="carousel-btn next" aria-label="다음 이미지">&#62;</button>
+      </div>
+    </div>
   </section>
   <script>
     // 햄버거/X 아이콘 동적 변경 및 메뉴 열고 닫기
@@ -70,21 +81,26 @@
 
     // ===== 케러셀(슬라이더) 동작 =====
     const slides = document.querySelectorAll('.carousel-slide');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
     let currentSlide = 0;
     function showSlide(idx) {
       slides.forEach((slide, i) => {
         slide.classList.toggle('active', i === idx);
       });
     }
-    prevBtn.addEventListener('click', function() {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(currentSlide);
-    });
-    nextBtn.addEventListener('click', function() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
+    // 각 슬라이드의 prev/next 버튼에 이벤트 바인딩
+    slides.forEach((slide, i) => {
+      const prevBtn = slide.querySelector('.carousel-btn.prev');
+      const nextBtn = slide.querySelector('.carousel-btn.next');
+      prevBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentSlide = (i - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      });
+      nextBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentSlide = (i + 1) % slides.length;
+        showSlide(currentSlide);
+      });
     });
     // 터치 스와이프(모바일) 지원
     let startX = null;
@@ -96,9 +112,11 @@
       if (startX === null) return;
       let endX = e.changedTouches[0].clientX;
       if (endX - startX > 40) {
-        prevBtn.click();
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
       } else if (startX - endX > 40) {
-        nextBtn.click();
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
       }
       startX = null;
     });

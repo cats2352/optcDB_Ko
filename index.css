@@ -204,12 +204,14 @@ body {
   left: 0;
   top: 0;
   height: 100%;
-  display: flex;
+  display: none; /* 기본적으로 숨김 */
   flex-direction: column;
-  align-items: center; /* 중앙 정렬로 변경 */
+  align-items: center;
   justify-content: flex-end;
+  position: relative; /* 버튼 위치 기준 */
 }
 .carousel-slide.active {
+  display: flex; /* active만 보임 */
   opacity: 1;
   position: relative;
   z-index: 2;
@@ -241,7 +243,7 @@ body {
   margin: 0;
 }
 .carousel-btn {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(35, 198, 248, 0.5);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -250,19 +252,18 @@ body {
   font-size: 2rem;
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 16px;
   z-index: 10;
   transition: background 0.2s;
 }
 .carousel-btn:hover {
-  background: rgba(0,0,0,0.8);
+  background: rgba(35, 198, 248, 0.5);
 }
 .carousel-btn.prev {
-  left: 10px;
+  left: 16px;
 }
 .carousel-btn.next {
-  right: 10px;
+  right: 16px;
 }
 
 /* PC/태블릿(600px 이상) 케러셀 이미지 반응형 처리 */
