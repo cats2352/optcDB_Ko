@@ -1202,19 +1202,21 @@
 				}
 			case "crew":
 			case "enemies":
-				return `When there are ${condition.count} or ${condition.comparator} ${
-					condition.type
+				return `When there is ${
+					condition.comparator == "exactly"
+						? `${condition.comparator} ${condition.count} ${condition.type}`
+						: `${condition.count} or ${condition.comparator} ${condition.type}`
 				} ${
 					condition.targets
 						? arrayToString(condition.targets) + " characters"
 						: ""
-				}${
+				} ${
 					condition.relative
 						? condition.type == "crew"
 							? " than the enemy team"
 							: " than your crew"
 						: ""
-				}${condition.composition ? "" : " remaining"}, `;
+				} ${condition.composition ? "" : " remaining"}, `;
 			case "trigger":
 				return `The first ${condition.count} times ${
 					condition.stat.includes("defeated")
@@ -1226,7 +1228,7 @@
 						: "this character "
 				}${
 					condition.stat == "takes damage" ||
-					condition.stat.includes("recieves") ||
+					condition.stat.includes("receives") ||
 					condition.stat.includes("defeated")
 						? condition.stat
 						: "lands a " + condition.stat
