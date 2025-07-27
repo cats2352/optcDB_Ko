@@ -596,8 +596,7 @@
 				if (flags.tmshop)
 					htmlToAppend += '<span class="tag flag">교환소 한정 캐릭터</span>';
 				if (flags.special)
-					htmlToAppend +=
-						'<span class="tag flag">로그인 보너스 한정 캐릭터</span>';
+					htmlToAppend +='<span class="tag flag">로그인 보너스 한정 캐릭터</span>';
 				if (flags.inkable)
 					htmlToAppend += '<span class="tag flag">Inkable</span>';
 				if (CharUtils.checkFarmable(id, { "Story Island": true }))
