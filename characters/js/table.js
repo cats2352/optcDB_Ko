@@ -276,7 +276,7 @@
 			if (unit.cost < filters.cost[0] || unit.cost > filters.cost[1])
 				return false;
 			// filter by drop
-			//if(id == 2) console.log(filters);
+			//if(id == 2) console.log(filters); //해당 아래의 코드는 directives.js의 파밍태그값들의 테이블 데이터를 저장하는 코드
 			if (filters.nonFarmable && Object.keys(filters.nonFarmable).length > 0) {
 				// RR
 				if (filters.nonFarmable.rro && !flags.rro) return false;
