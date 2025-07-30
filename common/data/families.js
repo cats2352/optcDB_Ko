@@ -724,6 +724,7 @@ const BuckinghamStussy = [ "Miss Buckingham Stussy" ];
 const MonkeyDDragon = [ "Monkey D. Dragon" ];
 const Ginny = [ "Ginny" ];
 const FigarlandGarling = [ "Saint Figarland Garling" ];
+const Alpha = [ "Alpha" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -5025,6 +5026,9 @@ window.families = {
     4411: [ ...EmporioIvankov ],
     4412: [ ...BartholomewKuma, ...Ginny ],
     4413: [ ...CharlotteLinlin ],
+    4415: [ ...Alpha ],
+    4416: [ ...Sentomaru ],
+    4417: [ ...Sentomaru ],
     //4414: [ ...CharlotteLinlin ],
     //break 해당 코드의 역할은 세부정보창의 가족부분담당
     4986: [ ...MonkeyDLuffy ],
