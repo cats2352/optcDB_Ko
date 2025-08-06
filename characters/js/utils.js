@@ -340,6 +340,12 @@ CharUtils.checkMatcher = function(matcher, id) {
         target = "VSCondition";
         targetString = window.details[id]["VSCondition"];
     }
+    if (matcher.target == "rumbleAbility" && window.rumble[id]) {
+        targetString = window.rumble[id].character1 ? [ window.rumble[id].character1.festAbility, window.rumble[id].character2.festAbility ]  : window.rumble[id].festAbility;
+    }
+    if (matcher.target == "rumbleResistance" && window.rumble[id]) {
+        targetString = window.rumble[id].character1 ? [ window.rumble[id].character1.festResistance, window.rumble[id].character2.festResistance ]  : window.rumble[id].festResistance;
+    }
     if (matcher.name == "Has Level Limit Break" && window.details[id].lLimit) {//Override for Seach by Level Limit Break (To keep it with other Limit Break filters)
         return true;
     }
@@ -357,6 +363,12 @@ CharUtils.checkMatcher = function(matcher, id) {
 
     if (targetString.constructor != String)
         targetString = JSON.stringify(targetString);
+
+    // ✅ 전처리: 필터 정상 작동 위해 단어 교체
+    targetString = targetString
+    .replace(/\bnon-type\b/gi, "typeless")
+    .replace(/\bto enemies\b/gi, "to all enemies")
+    .replace(/\bat end of turn\b/gi, "at the end of the turn");
     if (matcher.submatchers) {
         // only exit if false, because even if it's true, the submatcher params
         // can be different (may become false when submatchers are evaluated)

@@ -301,7 +301,7 @@ input#burgerMenuState {
     border-radius: 8px;
     padding: 3px 8px;
     background-color: #fff;
-    color: #333333;
+    color: #fff;
     cursor: pointer;
     font-weight: normal;
 }
@@ -363,7 +363,7 @@ input#burgerMenuState {
     height: 109px;
     border-bottom: 1px solid #aaa;
 }
-
+/* 해당 코드는 속성이나 특정슬롯에 대한 디자인을 details.js에서 가져와서 매핑하는 방식임 */
 .STR        { background: salmon; }
 .QCK        { background: lightskyblue; }
 .DEX        { background: lightgreen; }

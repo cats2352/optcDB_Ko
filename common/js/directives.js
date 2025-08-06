@@ -80,7 +80,7 @@ filters.decorate = function() {
       if (!input) return 'None';
       if (input.constructor == Array) input = input[0];
       if (input.constructor != String) return 'N/A';
-  
+  //해당 코드는 속성 슬롯 코드의 매핑 텍스트를 나타냄
       const orbMap = { STR: '힘 속성', DEX: '기 속성', QCK: '속 속성', PSY: '심 속성', INT: '지 속성' };
   
       return input
@@ -95,7 +95,7 @@ filters.decorate = function() {
         .replace(/\[PARALYSIS\]/g,'<span class="badge PARALYSIS">마비</span>')
         .replace(/\[RAINBOW\]/g,'<span class="badge RAINBOW">무지개</span>')
         .replace(/\[SEMLA\]/g,'<span class="badge SEMLA">셈라</span>')
-        .replace(/\[WANO\]/g,'<span class="badge WANO">와노</span>')
+        .replace(/\[WANO\]/g,'<span class="badge WANO">和</span>')
         .replace(/\[G\]/g,'<span class="badge G">G</span>');
     };
   };

@@ -7745,6 +7745,586 @@
 			},
 
 		],
+				"버프": [
+			{
+				name: "미스 발생 확률 감소",
+				targets: ["rumbleAbility"],
+				regex:
+					/Applies Lv. ([\d]+)[^.]+Accuracy[^.]+up buff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "공격력",
+				targets: ["rumbleAbility"],
+				regex:
+					/Applies Lv. ([\d]+)[^.]+ATK[^.]+up buff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "날려버리기 발생 확률",
+				targets: ["rumbleAbility"],
+				regex:
+					/Applies Lv. ([\d]+)[^.]+Blow Away[^.]+up buff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "크리티컬 발생 확률",
+				targets: ["rumbleAbility"],
+				regex:
+					/Applies Lv. ([\d]+)[^.]+Critical Hit[^.]+up buff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "방어력",
+				targets: ["rumbleAbility"],
+				regex:
+					/Applies Lv. ([\d]+)[^.]+DEF[^.]+up buff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "가드 성공 확률",
+				targets: ["rumbleAbility"],
+				regex:
+					/Applies Lv. ([\d]+)[^.]+Guard[^.]+up buff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "체력",
+				targets: ["rumbleAbility"],
+				regex:
+					/Applies Lv. ([\d]+)[^.]+HP[^.]+up buff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "회복력",
+				targets: ["rumbleAbility"],
+				regex:
+					/Applies Lv. ([\d]+)[^.]+RCV[^.]+up buff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "실드",
+				targets: ["rumbleAbility"],
+				regex:
+					/Applies Lv. ([\d]+)[^.]+Shield[^.]+up buff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "속도",
+				targets: ["rumbleAbility"],
+				regex:
+					/Applies Lv. ([\d]+)[^.]+SPD[^.]+up buff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "필살기 쿨타임이 차는 속도",
+				targets: ["rumbleAbility"],
+				regex:
+					/Applies Lv. ([\d]+)[^.]+Special CT[^.]+up buff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+		],
+
+		"디버프": [
+			{
+				name: "미스 발생 확률 상승",
+				targets: ["rumbleAbility"],
+				regex:
+					/Inflicts Lv. ([\d]+)[^.]+Accuracy[^.]+down debuff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "공격력",
+				targets: ["rumbleAbility"],
+				regex:
+					/Inflicts Lv. ([\d]+)[^.]+ATK[^.]+down debuff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "크리티컬 확률",
+				targets: ["rumbleAbility"],
+				regex:
+					/Inflicts Lv. ([\d]+)[^.]+Critical Hit[^.]+down debuff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "방어력",
+				targets: ["rumbleAbility"],
+				regex:
+					/Inflicts Lv. ([\d]+)[^.]+DEF[^.]+down debuff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "가드 성공 확률",
+				targets: ["rumbleAbility"],
+				regex:
+					/Inflicts Lv. ([\d]+)[^.]+Guard[^.]+down debuff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "체력",
+				targets: ["rumbleAbility"],
+				regex:
+					/Inflicts Lv. ([\d]+)[^.]+HP[^.]+down debuff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "속도",
+				targets: ["rumbleAbility"],
+				regex:
+					/Inflicts Lv. ([\d]+)[^.]+SPD[^.]+down debuff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "필살기 쿨타임 차는 속도",
+				targets: ["rumbleAbility"],
+				regex:
+					/Inflicts Lv. ([\d]+)[^.]+Special CT[^.]+down debuff to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Level:",
+						groups: [1],
+					},
+					...createUniversalSubmatcher([2]),
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+		],
+
+		"내성": [
+
+			{
+				name: "행동 봉쇄",
+				targets: ["rumbleResistance"],
+				regex:
+					/([\d]+)% chance to resist Action Bind./i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Chance:",
+						groups: [1],
+					},
+				],
+			},
+
+			{
+				name: "지속 데미지",
+				targets: ["rumbleResistance"],
+				regex:
+					/([\d]+)% chance to resist Damage Over Time./i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Chance:",
+						groups: [1],
+					},
+				],
+			},
+
+			{
+				name: "강제 퇴장",
+				targets: ["rumbleResistance"],
+				regex:
+					/([\d]+)% chance to resist Forced Out./i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Chance:",
+						groups: [1],
+					},
+				],
+			},
+
+			{
+				name: "능력치 50% 감소",
+				targets: ["rumbleResistance"],
+				regex:
+					/([\d]+)% chance to resist Half Stats./i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Chance:",
+						groups: [1],
+					},
+				],
+			},
+
+			{
+				name: "마비",
+				targets: ["rumbleResistance"],
+				regex:
+					/([\d]+)% chance to resist Paralysis./i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Chance:",
+						groups: [1],
+					},
+				],
+			},
+
+			{
+				name: "회복 봉쇄",
+				targets: ["rumbleResistance"],
+				regex:
+					/([\d]+)% chance to resist RCV Bind./i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Chance:",
+						groups: [1],
+					},
+				],
+			},
+
+			{
+				name: "필살기 봉쇄",
+				targets: ["rumbleResistance"],
+				regex:
+					/([\d]+)% chance to resist Special Bind./i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Chance:",
+						groups: [1],
+					},
+				],
+			},
+
+		],
 		기타: [
 			{
 				name: "기본 능력치 패시브만 보유한 캐릭터 제외",
@@ -7982,6 +8562,93 @@
 				targets: ["superSpecialCriteria"],
 				regex: /[^."]+?When this character is in Combined Form from Super Swap Effect[^."]*?/i,
 			},
+			/* * * * * Rumble Ability * * * * */
+
+			{
+				name: "자신이 격파 시 행동",
+				targets: ["rumbleAbility"],
+				regex: /On death launches rumble special [\d]+ times?./i,
+			},
+
+			{
+				name: "부활",
+				targets: ["rumbleAbility"],
+				regex:
+					/Revive to ([\d]+)% HP after death to ([^.]+) ([\d]+) times?./i,
+				submatchers: [
+					{
+						type: "number",
+						description: "체력%:",
+						groups: [1],
+					},
+					{
+						type: "number",
+						description: "횟수:",
+						groups: [3],
+					},
+				],
+			},
+
+			/* * * * * Rumble Resistance * * * * */
+
+			/* * * * * Rumble Resistance * * * * */
+
+			{
+				name: "받는 데미지 감소",
+				targets: ["rumbleResistance"],
+				regex:
+					/([\d]+)% damage reduction from ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Percentage:",
+						groups: [1],
+					},
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+					{
+						type: "separator",
+						description: "Classes:",
+					},
+					...createClassesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "주는 데미지 증가",
+				targets: ["rumbleResistance"],
+				regex:
+					/([.\d]+)x damage boost to ([^.]+)/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Multiplier:",
+						groups: [1],
+					},
+					{
+						type: "separator",
+						description: "Types:",
+					},
+					...createTypesSubmatchers([2]),
+				],
+			},
+
+			{
+				name: "일정 시간마다 체력 회복",
+				targets: ["rumbleResistance"],
+				regex:
+					/Heals ([,\d]+) HP every 5 seconds/i,
+				submatchers: [
+					{
+						type: "number",
+						description: "Amount:",
+						groups: [1],
+					},
+				],
+			},	
 		],
 	};
 
