@@ -359,6 +359,7 @@ app.controller(
     $scope.dualunit = 
         $scope.unit.type && $scope.unit.type.constructor == Array;
     $scope.details = window.details_kor[id];
+    $scope.cooldown = window.cooldowns[id - 1];
     $scope.evolution = window.evolutions[id];
     $scope.families = window.families[id];
     $scope.unit.tags =  CharUtils.getUnitTags(id);/* 태그 코드 추가 */

@@ -81,7 +81,7 @@ filters.decorate = function() {
       if (input.constructor == Array) input = input[0];
       if (input.constructor != String) return 'N/A';
   //해당 코드는 속성 슬롯 코드의 매핑 텍스트를 나타냄
-      const orbMap = { STR: '힘 속성', DEX: '기 속성', QCK: '속 속성', PSY: '심 속성', INT: '지 속성' };
+      const orbMap = { STR: '힘', DEX: '기', QCK: '속', PSY: '심', INT: '지' };
   
       return input
         .replace(/\[?(STR|DEX|QCK|PSY|INT)\]?/g, (_, type) => `<span class="badge ${type}">${orbMap[type]}</span>`)
