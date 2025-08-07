@@ -114,6 +114,21 @@ app.controller(
     };
     });
 
+// festival 타입 매핑 필터 추가
+app.filter('festivalTypeTranslate', function() {
+    const typeMap = {
+        "BAL": "밸런스형",
+        "DBF": "디버프형",
+        "ATK": "공격형",
+        "DEF": "방어형",
+        "SPT": "지원형",
+        "RCV": "회복형"
+    };
+    return function(input) {
+        return typeMap[input] || input;
+    };
+});
+
 app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout) {
     $scope.classLabelMap = {
         'Fighter': '격투',
@@ -343,7 +358,7 @@ app.controller(
       dataType: "json",
       contentType: "application/json",
     };
-//해당 코드는 디테일파일과 연결을 위해 추가한것이므로
+//해당 코드는 디테일파일과 연결을 위해 추가한것이므로 수정금지
     $scope.rumble = ($scope.details && $scope.details.festStats) ? {
        festStats: $scope.details.festStats,
         festAttackTarget: $scope.details.festAttackTarget,
@@ -353,6 +368,14 @@ app.controller(
     // data
     var id = parseInt($stateParams.id, 10);
     $scope.id = id;
+    
+    // festival 데이터 가져오기 (캐릭터 ID는 1부터 시작하므로 id-1 인덱스 사용)
+    //해당 데이터는 원본 DB와 다르게 따로 추가한 코드임 만약 오류가 발생하면 해당 코드 삭제 및 디테일에서도 해당 코드 관련 삭제 바람
+    if (window.festival && window.festival[id - 1]) {
+        $scope.festivalData = window.festival[id - 1];
+        // festivalData[0] = 타입, festivalData[1] = 방어력, festivalData[2] = 스피드
+    }
+    
     $scope.unit = jQuery.extend({}, window.units[id - 1]);
     $scope.hybrid = 
         $scope.unit.class && $scope.unit.class.constructor == Array;
