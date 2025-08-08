@@ -6801,7 +6801,7 @@
 			},
 
 			{
-				name: "Counter-RCV - 번역중",
+				name: "회복데미지계열",
 				targets: [
 					"captain",
 					"special",
