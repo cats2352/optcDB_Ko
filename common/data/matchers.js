@@ -2910,6 +2910,11 @@
 					},
 					{
 						type: "separator",
+						description: "영향을 받는 속성:",
+					},
+					...createTypesSubmatchers([1]),
+					{
+						type: "separator",
 						description: "영향을 받는 타입:",
 					},
 					...createClassesSubmatchers([1]),
